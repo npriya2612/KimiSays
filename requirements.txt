@@ -1,0 +1,11 @@
+fitz
+python-docx
+requests
+beautifulsoup4
+chromadb
+pymilvus
+langchain
+llama_index
+discord.py
+flask
+streamlit

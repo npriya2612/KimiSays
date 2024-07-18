@@ -1,0 +1,96 @@
+AWS Node Setup procedure
+2.1 Access Rules - AWS
+Select the region as eu-west-2
+To set up access rules on AWS , following actions to be done.
+2.1.2 Create VPC
+Go to AWS Console and type VPC in the search tab.
+Now click on “Your VPCs”
+Click on “Create VPC”
+Enter VPC details as below.
+you can provide a name for VPC or leave with default value.
+In IPv4 CIDR enter 10.0.0.0/24 or any other value which is suitable for you.
+Now click on “Create VPC”.
+VPC is now created.
+2.1.3 Create internet gateway
+Now search for Internet Gateway and click on Internet Gateway
+Click on Create Internet Gateway
+Enter a name and click on Create internet gateway
+Click on Attach to a VPC
+Select the VPC created in earlier step and click on Attach Internet
+gateway
+2.1.4 Add internet gateway to Route table
+Search for VPC and select the VPC created in the earlier step.
+Click on Virtual private cloud->Route tables on the left navigation bar.
+Click on Route table ID
+Click on Edit Routes
+Click on Add Route
+Enter details as shown above and select the internet gateway created earlier
+Click on Save changes.
+2.1.5 Create Subnet
+Search for Subnet and click on Subnet - VPC feature
+Click on Create Subnet
+Select the VPC created earlier
+Enter details as below and click on Create Subnet.
+2.1.4 Create Security Group
+●
+Create a security group with a set of rules for inbound and outbound traffic.
+In service finder enter “Security Group” and click on “Security groups (EC2 feature)
+Click on “Create Security Group”
+This opens up a dialog box to create a security group.
+In Basic Details enter
+- Security group name
+- Description
+- Select VPC created earlier.
+After entering Basic details, now add rules for inbound and outbound.
+Click on Add Rule and add ports given below for a Guardian Node (For master node check
+next step)
+Or add ports as below for a Master Node
+Enter value as shown above in the image.
+Outbound rules tab can be left with default values as shown below
+And click on Create Security Group to create.
+Security group is now created.
+Node Setup in AWS.
+3.1 Node Setup.
+All resources including EC2 instances need to be created in London (eu-west-2).
+Log on to the AWS console with your credentials.
+In the console home and find tab type “EC2” as shown below
+Click on “EC2” which takes you to EC2 Dashboard
+3.1.1 – Creating Key Pairs
+This section explains about creating a keypair which is required to access EC2 instances.
+(if you already have a key pair which can be used with a new EC2 instance you can ignore
+this section).
+In the EC2 Dashboard left panel, “Networks & Security “ section click on “Key Pairs” as
+shown below.
+Click on “Create Key Pair” yellow button on the right hand side corner which launches a new
+dialog box as shown below
+Enter a name for key pair in “Name” tab
+Select “RSA” and select “.pem” or “.ppk” as shown above and click on Create Key Pair.
+This creates a new Key pair with the name given in the name tab.
+Key pair creation is now Completed and the keypair file with name provided is downloaded
+automatically.
+3.1.2 – Creating EC2 instance.
+Continue with creating a new EC2 Instance. Type “EC2” in Services find box as below
+Click on EC2 to go to the EC2 Dashboard.
+Now click on “Launch Instance” as shown below.
+In “Name and Tags” enter a name for your node. And select Ubuntu Server 20.04 LTS(HVM)
+SSD Volume type Amazon Machine Image (AMI) as given below.
+Select the instance type as given below (8 CPU , 16GB Ram)
+Once Instance type is selected, now select the KeyPair as shown below
+pull down the key pair name box and select the key pair created earlier
+Setup “Network Settings”
+Click on Edit
+Enter details as shown below
+Now go to “Set the Storage Size” task
+Set the Storage size (320Gb) as given below
+Now we are all ready to launch the instance.
+Click on the Launch Instance and wait until the instance is created.
+Node Registration Procedure (AWS).
+Now the EC2 instance is created, it is time to connect and install NMS software.
+To connect the EC2 instance search for EC2 dashboard and click on EC2 dashboard
+Click on Instances (running)
+Click on instance ID
+Click on Connect
+Click on Connect
+Now EC2 instance command line is accessible.
+
+

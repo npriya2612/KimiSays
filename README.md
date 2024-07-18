@@ -1,7 +1,7 @@
 
-# kimisays - Customized LLM Chatbot
+# KimiSays - Customized LLM Chatbot
 
-kimisays is a customized LLM (Large Language Model) chatbot built using Streamlit and LangChain libraries to facilitate interactive query handling and document retrieval.
+KimiSays is a customized LLM (Large Language Model) chatbot built using Streamlit and LangChain libraries to facilitate interactive query handling and document retrieval.
 
 ## Features
 

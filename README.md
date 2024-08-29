@@ -23,7 +23,7 @@ KimiSays is a customized LLM (Large Language Model) chatbot built using Streamli
 
 ### Installation and Setup
 
-1. **Clone Repository**: `git clone https://github.com/your_username/kimisays.git`
+1. **Clone Repository**: `git clone https://github.com/npriya2612/kimisays.git`
 2. **Install Dependencies**: `pip install -r requirements.txt`
 3. **Run Streamlit App**: `streamlit run app.py`
 
